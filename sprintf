@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 int main(void){
-	char str[100];
+	char str[100];	//在字串後方增加字串，而不取代原有字串
 	int index = 0;
 	index = sprintf(str+index,"test%d",index);
 	puts(str);	//test0
