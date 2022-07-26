@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void){
+	char str[100];
+	int index = 0;
+	sprintf(str,"0123");
+	str[index] = 'x';		//	x123
+	puts(str);
+	str[index++] = 'y';		//	y123
+	puts(str);
+	str[++index] = 'z';		//	y1z3
+	puts(str);
+	
+	return 0;
+}
+
+===========================
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void){
+	
+	int i;
+	
+	for(i = 0;i<3;i++){
+		printf("%d",i);		//	012
+	}
+	printf("\n");
+	printf("%d",i);			//	3
+	printf("\n");
+	
+	for(i = 0;i<3;++i){
+		printf("%d",i);		//	012
+	}
+	printf("\n");
+	printf("%d",i);			//	3
+	printf("\n");
+}
